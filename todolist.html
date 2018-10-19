@@ -6,43 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style/todolist.css">
     <title>todoList</title>
 </head>
 
 <body>
-    <h1>ToDOLIST</h1>
-    <div id="app">
-        <ol>
-            <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id"></todo-item>
-        </ol>
-        <button v-on:click="addItem">add</button>
-        <button v-on:click="removeItem">remove</button>
-    </div>
-    <script>
-        Vue.component('todo-item', {
-            props: ['todo'],
-            template: '<li>{{todo.text}}</li>'
-        })
+    <div id="todoTask">
 
-        var app = new Vue({
-            el: '#app',
-            data: {
-                groceryList: [{
-                        id: 0,
-                        text: 'item1'
+
+        <h1>TODOLIST</h1>
+        <div id="app">
+            <ol>
+                <ul v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+                    <div :class="item.isChecked?'is_checked':'normal'">
+                        <p>{{item.text}}</p><button v-on:click="finishItem(item)" class="button-borderless">reverse</button><button v-on:click="removeItem(item)" class="button-borderless">remove</button>
+                    </div>
+                </ul>
+            </ol>
+            <input v-model="message">
+            <button v-on:click="addItem" class="button-borderless">add</button>
+        </div>
+        <script>
+            var idNum = 0;
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    groceryList: [],
+                },
+                methods: {
+
+                    addItem: function () {
+                        console.log(this.groceryList)
+                        if (this.message == "")
+                            return console.warn("no content")
+                        this.groceryList.push({
+                            id: ++idNum,
+                            text: this.message,
+                            isChecked :false
+                        })
+                        this.message = "";
                     },
-                    {
-                        id: 1,
-                        text: 'item2'
+                    removeItem: function (item) {
+                        let i = this.groceryList.indexOf(item)
+                        this.groceryList.splice(i, 1)
                     },
-                    {
-                        id: 2,
-                        text: 'item3'
+                    finishItem: function(item){
+                        item.isChecked = !item.isChecked
                     }
-                ]
-            }
-        })
-    </script>
+                }
+            })
+        </script>
+    </div>
 </body>
 
 </html>

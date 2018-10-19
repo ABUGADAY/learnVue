@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 15px/1.3 'Open Sans', sans-serif;
+    color: #5e5b64;
+    text-align: center;
+}
+
+input{
+    border-radius: 5px;
+    margin: 5px;
+    background: rgb(79, 175, 240)
+}
+
+#todoTask {
+    border-radius: 25px;
+    background-color: rgb(56, 151, 139);
+    border-radius: 2px;
+    box-shadow: 0 1px 1px #ccc;
+    width: 400px;
+    padding: 35px 60px;
+    margin: 50px auto;
+}
+
+.to-do {
+    border-radius: 25px;
+    padding: 20px 30px;
+    background-color: #e35885;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: blanchedalmond
+}
+
+/* .to-do div{
+    
+} */
+
+.is_checked {
+    border-radius: 25px;
+    padding: 20px 30px;
+    background-color: #e35885;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    text-decoration:line-through;
+}
+
+.normal {
+    border-radius: 25px;
+    padding: 20px 30px;
+    background-color: #62e3fd;
+    margin-bottom: 8px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+}
+
+/*
+* Border Buttons
+*
+* These buttons have no fill they only have a
+* border to define their hit target.
+*/
+.button-borderless {
+    background: none;
+    border: none;
+    padding: 0 8px !important;
+    color: #EEE;
+    font-size: 20.8px;
+    font-weight: 200;
+    /*
+    * Borderless Button Colors
+    *
+    * Create colors for buttons
+    * (.button-primary, .button-secondary, etc.)
+    */
+    /*
+    * Borderles Size Adjustment
+    *
+    * The font-size must be large to compinsate for
+    * the lack of a hit target.
+    */
+}
+
+.button-borderless:hover,
+.button-borderless:focus {
+    background: none;
+}
+
+.button-borderless:active,
+.button-borderless.active,
+.button-borderless.is-active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    opacity: .3;
+}
+
+.button-borderless.button-primary {
+    color: #1B9AF7;
+}
+
+.button-borderless.button-plain {
+    color: #FFF;
+}
+
+.button-borderless.button-inverse {
+    color: #222;
+}
+
+.button-borderless.button-action {
+    color: #A5DE37;
+}
+
+.button-borderless.button-highlight {
+    color: #FEAE1B;
+}
+
+.button-borderless.button-caution {
+    color: #FF4351;
+}
+
+.button-borderless.button-royal {
+    color: #7B72E9;
+}
+
+.button-borderless.button-giant {
+    font-size: 36.4px;
+    height: 52.4px;
+    line-height: 52.4px;
+}
+
+.button-borderless.button-jumbo {
+    font-size: 31.2px;
+    height: 47.2px;
+    line-height: 47.2px;
+}
+
+.button-borderless.button-large {
+    font-size: 26px;
+    height: 42px;
+    line-height: 42px;
+}
+
+.button-borderless.button-normal {
+    font-size: 20.8px;
+    height: 36.8px;
+    line-height: 36.8px;
+}
+
+.button-borderless.button-small {
+    font-size: 15.6px;
+    height: 31.6px;
+    line-height: 31.6px;
+}
+
+.button-borderless.button-tiny {
+    font-size: 12.48px;
+    height: 28.48px;
+    line-height: 28.48px;
+}
