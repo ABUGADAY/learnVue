@@ -23,6 +23,8 @@ input{
     width: 400px;
     padding: 35px 60px;
     margin: 50px auto;
+    height: 80%;
+    overflow :auto
 }
 
 .to-do {
@@ -171,4 +173,8 @@ p {
     font-size: 12.48px;
     height: 28.48px;
     line-height: 28.48px;
+}
+
+#remove{
+    margin-right: 3px
 }

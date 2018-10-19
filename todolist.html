@@ -18,8 +18,8 @@
         <div id="app">
             <ol>
                 <ul v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
-                    <div :class="item.isChecked?'is_checked':'normal'">
-                        <p>{{item.text}}</p><button v-on:click="finishItem(item)" class="button-borderless">reverse</button><button v-on:click="removeItem(item)" class="button-borderless">remove</button>
+                    <div :class="item.isChecked?'is_checked':'normal'" v-on:click="finishItem(item)" >
+                        <p>{{item.text}}</p><button v-on:click="removeItem(item)" id="remove" class="button-borderless">remove</button>
                     </div>
                 </ul>
             </ol>
